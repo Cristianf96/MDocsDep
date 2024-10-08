@@ -23,13 +23,13 @@ import { MDocsDep } from "mdocsdep";
 
 // Ejemplo de uso
 const mdocs = new MDocsDep();
-const diccionario = mdocs.generateDictionary({
-  db: "nombre_de_la_base_de_datos",
+const dictionary = mdocs.generateDictionary({
+  typeResource: "type of database like mssql, pg, mysql, etc...",
   data: "some data",
   keyValue: "some key value",
   secretName: "some secret name",
 });
-console.log(diccionario);
+console.log(dictionary);
 ```
 
 ## Requisitos

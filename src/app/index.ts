@@ -1,5 +1,5 @@
 interface GenerateDictionaryParams {
-  db: string;
+  typeResource: string;
   data: any;
   keyValue: string;
   secretName: string;
@@ -7,9 +7,10 @@ interface GenerateDictionaryParams {
 
 export class MDocsDep {
   generateDictionary(params: GenerateDictionaryParams): Record<string, any> {
-    const { db, data, keyValue, secretName } = params;
+    const { typeResource, data, keyValue, secretName } = params;
+
     return {
-      db,
+      typeResource,
       data,
       keyValue,
       secretName,
