@@ -1,10 +1,10 @@
 # MDocsDep
 
-MDocsDep es un paquete de NPM desarrollado con Node.js y TypeScript, diseñado para gestionar y consultar información en una base de datos, generando un diccionario de datos como respuesta. Este paquete proporciona detalles como nombres de tablas, columnas, tipos de datos y propiedades clave, facilitando la documentación y comprensión de los esquemas de bases de datos para su análisis y mantenimiento.
+MDocsDep es un paquete de NPM desarrollado con Node.js y TypeScript, diseñado para gestionar y consultar información en una base de datos MSSQL, generando un diccionario de datos como respuesta. Este paquete proporciona detalles como nombres de tablas, columnas, tipos de datos y propiedades clave, facilitando la documentación y comprensión de los esquemas de bases de datos para su análisis y mantenimiento.
 
 ## Características
 
-- Gestión y consulta de información en bases de datos.
+- Gestión y consulta de información en bases de datos MSSQL.
 - Generación de diccionarios de datos.
 - Detalles de nombres de tablas, columnas, tipos de datos y propiedades clave.
 - Facilita la documentación y comprensión de esquemas de bases de datos.
@@ -37,6 +37,7 @@ console.log(diccionario);
 - Node.js
 - TypeScript
 - Una cuenta de Azure con acceso a Azure Key Vault
+- Base de datos MSSQL
 
 ## Contribuir
 
