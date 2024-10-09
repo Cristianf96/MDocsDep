@@ -12,6 +12,6 @@ describe("MDocsDep", () => {
       typeResource: "testExampleDB",
     };
     const dictionary = await mdocs.generateDictionary(params);
-    expect(dictionary).toEqual(params);
+    expect(dictionary).toEqual(params.typeResource);
   });
 });

@@ -31,11 +31,11 @@ export interface IColumnWithDescription {
   column_name: string;
   column_data_type: string;
   column_length: number;
-  descriptionsColumn: ITableDescription;
+  column_descriptions: ITableDescription;
 }
 
 export interface ITableWithDescriptions {
-  nameTable: string;
-  descriptionsTable: ITableDescription;
-  columns: IColumnWithDescription[];
+  table_name: string;
+  table_descriptions: ITableDescription;
+  table_columns: IColumnWithDescription[];
 }
