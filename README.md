@@ -8,7 +8,6 @@ MDocsDep es un paquete de NPM desarrollado con Node.js y TypeScript, diseñado p
 - Generación de diccionarios de datos.
 - Detalles de nombres de tablas, columnas, tipos de datos y propiedades clave.
 - Facilita la documentación y comprensión de esquemas de bases de datos.
-- Integración con Azure Key Vault para la gestión de secretos.
 
 ## Instalación
 
@@ -33,8 +32,17 @@ console.log(dictionary);
 
 - Node.js
 - TypeScript
-- Una cuenta de Azure con acceso a Azure Key Vault
 - Base de datos MSSQL
+
+## Configuración de Variables de Entorno
+
+Asegúrate de configurar las siguientes variables de entorno en un archivo .env en la raíz de tu proyecto:
+
+DB_HOST=tu_host_de_base_de_datos
+DB_USER=tu_usuario_de_base_de_datos
+DB_PASSWORD=tu_contraseña_de_base_de_datos
+DB_PORT=tu_puerto_de_base_de_datos
+DB_DATABASE_NAME=tu_nombre_de_base_de_datos
 
 ## Contribuir
 
