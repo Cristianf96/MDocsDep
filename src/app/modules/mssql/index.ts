@@ -1,22 +1,19 @@
 import {
   IColumn,
   IColumnWithDescription,
-  IGenerateDictionaryParams,
   IGetColumnsMSSQL,
   IGetTablesMSSQL,
   ITableWithDescriptions,
-} from "@app/utils/interfaces/mssql.interface";
+} from "../../utils/interfaces/mssql.interface";
 import { QueryTypes } from "sequelize";
 import {
   CQueryGetColumnsMSSQL,
   CQueryGetTablesMSSQL,
-} from "@app/utils/constants/constants";
-import { getDbInstance } from "@app/modules/mssql/database";
+} from "../../utils/constants/constants";
+import { getDbInstance } from "./database/index";
 
 export class CMsSql {
-  static async generateDictionaryWithMsSql(
-    params: IGenerateDictionaryParams
-  ): Promise<Record<string, any>> {
+  static async generateDictionaryWithMsSql(): Promise<Record<string, any>> {
     let result: ITableWithDescriptions[] = [];
     const sequelizeInstance = getDbInstance();
     const getTables: IGetTablesMSSQL[] = await sequelizeInstance.query(
