@@ -48,7 +48,7 @@ export class CMsSql {
             column_name: column.column_name,
             column_data_type: column.column_data_type,
             column_length: column.column_length,
-            descriptionsColumn: {
+            column_descriptions: {
               es: descriptionEs,
               en: descriptionEn,
             },
@@ -56,17 +56,17 @@ export class CMsSql {
         }
       );
       result.push({
-        nameTable,
-        descriptionsTable: {
+        table_name: nameTable,
+        table_descriptions: {
           es: descriptionEs,
           en: descriptionEn,
         },
-        columns: columnsWithDescriptions,
+        table_columns: columnsWithDescriptions,
       });
     }
 
-    result.sort((a: { nameTable: string }, b: { nameTable: any }) =>
-      a.nameTable.localeCompare(b.nameTable)
+    result.sort((a: { table_name: string }, b: { table_name: any }) =>
+      a.table_name.localeCompare(b.table_name)
     );
 
     if (result.length === 0) {
