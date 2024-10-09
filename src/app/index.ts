@@ -1,6 +1,7 @@
 import { IGenerateDictionaryParams } from "./utils/interfaces/mssql.interface";
 import * as dotenv from "dotenv";
 import { CMsSql } from "./modules/mssql";
+import { EnumTypeResource } from "./utils/enums/enums";
 dotenv.config();
 
 export class MDocsDep {
@@ -11,13 +12,13 @@ export class MDocsDep {
       let result: any = {};
       const { typeResource } = params;
 
-      if (typeResource === "testExampleDB") {
+      if (typeResource === EnumTypeResource.testExampleDB) {
         return {
           typeResource,
         };
       }
 
-      if (typeResource === "mssql") {
+      if (typeResource === EnumTypeResource.mssql) {
         result = await CMsSql.generateDictionaryWithMsSql();
       }
 
