@@ -1,3 +1,3 @@
-import { MDocsDep } from '@app/app';
+import { MDocsDep } from "./app";
 
 export { MDocsDep };

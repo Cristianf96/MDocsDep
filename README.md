@@ -25,9 +25,6 @@ import { MDocsDep } from "mdocsdep";
 const mdocs = new MDocsDep();
 const dictionary = mdocs.generateDictionary({
   typeResource: "type of database like mssql, pg, mysql, etc...",
-  data: "some data",
-  keyValue: "some key value",
-  secretName: "some secret name",
 });
 console.log(dictionary);
 ```
