@@ -1,3 +1,10 @@
+import { EnumTypeResource } from "../enums/enums";
+
+export const CDatabaseInclude: string[] = [
+  EnumTypeResource.testExampleDB,
+  EnumTypeResource.mssql,
+];
+
 export const CQueryGetTablesMSSQL: string = `
           SELECT 
             t.name AS table_name, 
