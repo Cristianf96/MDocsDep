@@ -5,6 +5,7 @@ import {
 import * as dotenv from "dotenv";
 import { CMsSql } from "./modules/mssql";
 import { EnumTypeResource } from "./utils/enums/enums";
+import { CDatabaseInclude } from "./utils/constants/constants";
 dotenv.config();
 
 export class MDocsDep {
@@ -15,12 +16,20 @@ export class MDocsDep {
       let result: any = {};
       const { typeResource } = params;
 
-      if (typeResource === EnumTypeResource.testExampleDB) {
-        return typeResource;
+      if (!typeResource) {
+        throw new Error("The typeResource is required or not valid");
       }
 
-      if (typeResource === EnumTypeResource.mssql) {
-        result = await CMsSql.generateDictionaryWithMsSql();
+      if (CDatabaseInclude.includes(typeResource)) {
+        if (typeResource === EnumTypeResource.testExampleDB) {
+          return typeResource;
+        }
+
+        if (typeResource === EnumTypeResource.mssql) {
+          result = await CMsSql.generateDictionaryWithMsSql();
+        }
+      } else {
+        result = "The typeResource is not valid";
       }
 
       return result;

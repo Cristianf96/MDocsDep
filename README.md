@@ -18,7 +18,7 @@ npm install mdocsdep
 ## Uso
 
 ```typescript
-import { MDocsDep } from "mdocsdep";
+import { MDocsDep } from "@cristiandev/mdocsdep";
 
 // Ejemplo de uso
 const mdocs = new MDocsDep();
