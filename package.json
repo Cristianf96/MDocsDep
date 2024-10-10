@@ -1,6 +1,10 @@
 {
   "name": "@cristiandev/mdocsdep",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cristianf96/MDocsDep"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
